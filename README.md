@@ -23,3 +23,10 @@ Sets the niceness value for all applications to the lowest possible priority.
 Copy `apps.example.sh` to `apps.sh`. Add your application names. Run `sudo ./nice.sh` to list app applications that
 will be affected. Run `sudo ./nice.sh --live` to apply new niceness values.
 
+Crontab example (run every five minutes):
+
+```plaintext
+sudo -u root crontab -l
+Password:
+*/5 * * * * /path/to/nice/nice.sh --live
+```
